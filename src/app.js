@@ -3,7 +3,10 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const config = require('./utils/config')
 
+const API_KEY = config()
+console.log(API_KEY)
 const app = express()
 const port = process.env.PORT || 3000
 //Define path for Express config
